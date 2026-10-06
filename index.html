@@ -144,8 +144,10 @@ tr.tot td{font-weight:600;border-top:2px solid var(--line-2)}
 footer{max-width:72ch}
 
 /* RAEB brand header */
-:root{--brand-1:#4f80b2;--brand-2:#00518d;--accent:#00518d;--accent-soft:#e1ecf6}
-.hero{position:relative;overflow:hidden;color:#fff;background:var(--brand-2) url("hero-bg.jpg") center/cover no-repeat}
+:root{--brand-1:#2a86cf;--brand-2:#1c75bc;--accent:#00518d;--accent-soft:#e1ecf6}
+.hero{position:relative;overflow:hidden;color:#fff;background:#1c75bc linear-gradient(100deg,#2a86cf 0%,#1c75bc 55%,#176aad 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:url("hero-bg.jpg") center/cover no-repeat;opacity:.22;mix-blend-mode:screen;pointer-events:none}
+.hero .tag{background:rgb(255 255 255 / .1)}
 .hero-inner{position:relative;max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:44px 40px;display:flex;align-items:center;gap:22px 28px;flex-wrap:wrap}
 .hero .logo{height:56px;width:auto;flex:none}
 .hero-text{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1 1 320px}
