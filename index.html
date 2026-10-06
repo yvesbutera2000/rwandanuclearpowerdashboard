@@ -145,10 +145,11 @@ footer{max-width:72ch}
 
 /* RAEB brand header */
 :root{--brand-1:#2a86cf;--brand-2:#1c75bc;--accent:#00518d;--accent-soft:#e1ecf6}
-.hero{position:relative;overflow:hidden;color:#fff;background:#1c75bc linear-gradient(100deg,#2a86cf 0%,#1c75bc 55%,#176aad 100%)}
-.hero::before{content:"";position:absolute;inset:0;background:url("hero-bg.jpg") center/cover no-repeat;opacity:.22;mix-blend-mode:screen;pointer-events:none}
+.hero{position:relative;overflow:hidden;color:#fff;background:#05284a url("hero-photo.jpg") 70% 62%/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgb(4 30 56 / .92) 0%,rgb(12 64 112 / .78) 45%,rgb(28 117 188 / .30) 100%),linear-gradient(0deg,rgb(4 30 56 / .55) 0%,transparent 45%)}
 .hero .tag{background:rgb(255 255 255 / .1)}
-.hero-inner{position:relative;max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:44px 40px;display:flex;align-items:center;gap:22px 28px;flex-wrap:wrap}
+.hero .credit{position:absolute;right:16px;bottom:8px;font:400 .68rem var(--f-body);color:rgb(255 255 255 / .7);letter-spacing:.02em}
+.hero-inner{position:relative;max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:72px 64px;display:flex;align-items:center;gap:22px 28px;flex-wrap:wrap}
 .hero .logo{height:56px;width:auto;flex:none}
 .hero-text{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1 1 320px}
 .hero h1{font-family:"Poppins",var(--f-display);font-weight:600;font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.2;color:#fff}
@@ -159,7 +160,7 @@ footer{max-width:72ch}
 nav.tabs button{font-family:"Poppins",var(--f-display);font-weight:500;padding:12px 14px 11px}
 nav.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
 h2,h3{font-family:"Poppins",var(--f-display);font-weight:600}
-@media (max-width:560px){.hero-text{border-left:0;padding-left:0}.hero-inner{padding-block:24px}}
+@media (max-width:560px){.hero-text{border-left:0;padding-left:0}.hero-inner{padding-block:28px 44px}}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--accent:#6aa8e8;--accent-soft:#1a2c3d}}
 :root[data-theme="dark"]{--accent:#6aa8e8;--accent-soft:#1a2c3d}
 </style>
@@ -211,6 +212,7 @@ ul.news a:hover{color:var(--accent);text-decoration:underline}
       <div class="meta"><span class="tag">Public sources</span><span class="tag">Updated 6 Oct 2026</span></div>
     </div>
   </div>
+  <span class="credit">Illustration: artist's impression, not an existing facility</span>
 </header>
 <div class="tabbar"><div class="tabbar-inner"><nav class="tabs" role="tablist" aria-label="Dashboard sections">
       <button role="tab" id="t-status" aria-controls="s-status" aria-selected="true">Programme</button>
