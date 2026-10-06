@@ -161,7 +161,32 @@ h2,h3{font-family:"Poppins",var(--f-display);font-weight:600}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--accent:#6aa8e8;--accent-soft:#1a2c3d}}
 :root[data-theme="dark"]{--accent:#6aa8e8;--accent-soft:#1a2c3d}
 </style>
-<style>html{color-scheme:light}body{margin:0}img{max-width:100%}</style>
+<style>html{color-scheme:dark}body{margin:0}img{max-width:100%}
+/* Single dark brand theme (continues the RAEB header); wins over light/dark blocks */
+:root:not(#_){
+  --bg:#05284a; --panel:#0a365f; --ink:#ffffff; --ink-2:#c9d9ea; --ink-3:#93b3d3;
+  --line:#184a78; --line-2:#28608f; --accent:#7cc4ff; --accent-soft:#11426f;
+  --good:#63d69c; --good-bg:#0f3f3c; --warn:#ffc860; --warn-bg:#3b3522; --crit:#ff8f86; --crit-bg:#47263a;
+  --info:#c9d9ea; --info-bg:#14446f;
+  --s1:#4aa8ff; --s2:#ff8f52; --s3:#3fd3a2; --s4:#f2c34e; --nuke:#c7b9ff;
+  color-scheme:dark;
+}
+body{background:var(--bg) linear-gradient(180deg,#0a3a68 0,var(--bg) 520px) no-repeat}
+.tabbar{background:#04213e;border-bottom-color:var(--line)}
+nav.tabs button{color:var(--ink-3)}
+nav.tabs button:hover{color:var(--ink)}
+nav.tabs button[aria-selected="true"]{color:#fff;border-bottom-color:var(--accent)}
+.panel,.tile,.issue,.issues-list li,.tw{border-color:var(--line);background:var(--panel)}
+.tile .v,h2,h3{color:#fff}
+th{background:#082f55;color:var(--ink-3)}
+.filters button{background:transparent;border-color:var(--line-2);color:var(--ink-2)}
+.filters button[aria-pressed="true"]{background:#fff;color:#05284a;border-color:#fff}
+.tip{background:#062c52;border-color:var(--line-2);box-shadow:0 6px 20px rgb(0 0 0 / .35)}
+a{color:var(--accent)}
+.src a{color:var(--ink-2)}
+footer{border-top-color:var(--line);color:var(--ink-3)}
+.bar-track{background:#072b4f}
+</style>
 </head>
 <body>
 <header class="hero">
