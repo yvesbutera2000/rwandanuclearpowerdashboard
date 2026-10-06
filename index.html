@@ -148,7 +148,7 @@ footer{max-width:72ch}
 .hero{position:relative;overflow:hidden;color:#fff;background:var(--brand-2) url("hero-bg.jpg") center/cover no-repeat}
 .hero-inner{position:relative;max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:44px 40px;display:flex;align-items:center;gap:22px 28px;flex-wrap:wrap}
 .hero .logo{height:56px;width:auto;flex:none}
-.hero-text{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1 1 320px;border-left:1px solid rgb(255 255 255 / .35);padding-left:26px}
+.hero-text{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1 1 320px}
 .hero h1{font-family:"Poppins",var(--f-display);font-weight:600;font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.2;color:#fff}
 .hero .sub{color:rgb(255 255 255 / .85);font-size:.92rem}
 .hero .tag{border-color:rgb(255 255 255 / .5);color:#fff}
@@ -186,13 +186,23 @@ a{color:var(--accent)}
 .src a{color:var(--ink-2)}
 footer{border-top-color:var(--line);color:var(--ink-3)}
 .bar-track{background:#072b4f}
+
+.proj{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.proj .k{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.proj p{margin:0;color:var(--ink-2)}
+ul.news{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ul.news li{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}
+ul.news li:last-child{border-bottom:0}
+ul.news .nd{font-family:var(--f-mono);font-size:.78rem;color:var(--ink-3);padding-top:2px}
+ul.news a{color:var(--ink);text-decoration:none}
+ul.news a:hover{color:var(--accent);text-decoration:underline}
+@media (max-width:560px){ul.news li{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body>
 <header class="hero">
   
   <div class="hero-inner">
-    <img class="logo" src="data:image/png;base64,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" alt="RAEB, Rwanda Atomic Energy Board" width="113" height="56">
     <div class="hero-text">
       <h1>Rwanda Nuclear Power Programme Dashboard</h1>
       <p class="sub">Status, partnerships and energy context, compiled from published government documents and public reports</p>
@@ -230,8 +240,42 @@ footer{border-top-color:var(--line);color:var(--ink-3)}
       <h2>On the record</h2>
       <blockquote class="q">“Strong government support and effective coordination of the preparatory work helped Rwanda make significant progress towards deciding on a nuclear power programme.”<cite>Mehmet Ceyhan, IAEA, INIR technical lead · March 2026</cite></blockquote>
       <blockquote class="q">“The IAEA's review provides invaluable guidance to align our framework with international safety standards and global best practices.”<cite>Jimmy Gasore, Minister of Infrastructure · March 2026</cite></blockquote>
-      <p class="src">Source: <a href="https://capitalfm.africa/rwanda-makes-progress-on-nuclear-energy-infrastructure-iaea-says/" target="_blank" rel="noopener">Capital FM, reporting the IAEA press release</a></p>
+      <blockquote class="q">“Nuclear energy is not too complex or risky for developing countries.”<cite>President Paul Kagame, Nuclear Energy Summit, Paris · 10 March 2026</cite></blockquote>
+      <p class="src">Sources: <a href="https://capitalfm.africa/rwanda-makes-progress-on-nuclear-energy-infrastructure-iaea-says/" target="_blank" rel="noopener">Capital FM, reporting the IAEA press release</a> · <a href="https://www.raeb.gov.rw/updates/news-detail/nuclear-energy-is-central-to-rwandas-development-strategy-president-paul-kagame" target="_blank" rel="noopener">RAEB, 11 March 2026</a></p>
     </div>
+  </div>
+
+  <div class="block">
+    <div>
+      <h2>RAEB projects</h2>
+      <p class="lede">The three flagship projects listed by the Rwanda Atomic Energy Board.</p>
+    </div>
+    <div class="grid proj">
+      <div class="panel block">
+        <span class="k">Power</span>
+        <h3>Small Modular Reactor</h3>
+        <p>Nuclear power plant based on SMR technology to meet growing electricity demand. First unit targeted for the early 2030s; 55 MW in 2033 in the least-cost plan's strategic case. An SMR roadmap was signed with Rosatom at the first Joint Coordinating Committee meeting in 2026.</p>
+        <p class="src">raeb.gov.rw/projects · LCPDP 2024 Review</p>
+      </div>
+      <div class="panel block">
+        <span class="k">Research &amp; training</span>
+        <h3>Centre for Nuclear Science and Technology</h3>
+        <p>Research reactor and laboratories, established under an intergovernmental agreement with the Russian Federation (October 2019). Planned as a hub for research, workforce training and medical isotope production. The IAEA reviewed Rwanda's readiness for it in an INIR mission for research reactors, 13–21 July 2026.</p>
+        <p class="src">raeb.gov.rw/projects · RAEB news, 24 July 2026</p>
+      </div>
+      <div class="panel block">
+        <span class="k">Advanced reactors</span>
+        <h3>Critical Demonstration Experiment</h3>
+        <p>Cooperation agreement signed in September 2023 with Dual Fluid Energy Inc., a Canadian-German nuclear technology company, for a demonstration experiment in Rwanda.</p>
+        <p class="src">raeb.gov.rw/projects</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel block">
+    <h3>Latest from RAEB</h3>
+    <ul class="news" id="news"></ul>
+    <p class="src">Source: <a href="https://www.raeb.gov.rw/updates/news" target="_blank" rel="noopener">raeb.gov.rw/updates/news</a> · dates as published</p>
   </div>
 
   <div class="two">
@@ -372,12 +416,19 @@ $("#status-tiles").innerHTML =
   tile("Implementing body","RAEB","Established 3 December 2020","Presidential Order N° 127/01");
 
 const MILESTONES = [
+ ["2019-10","Intergovernmental agreement with Russia on the Centre for Nuclear Science and Technology","raeb.gov.rw/projects","done"],
  ["2020-12-03","Rwanda Atomic Energy Board established","Presidential Order N° 127/01","done"],
+ ["2023-09","Cooperation agreement with Dual Fluid Energy on a critical demonstration experiment","raeb.gov.rw/projects","done"],
  ["2025-02","Energy Policy provides for nuclear power and a dedicated nuclear policy and law","Energy Policy, MININFRA","done"],
  ["2025-09","Least-cost plan (2024 Review) includes SMR and recommends fast-tracking its feasibility study","LCPDP 2024 Review, REG","done"],
- ["2026-03-09","IAEA INIR Phase 1 mission completed","IAEA press release","done"],
+ ["2025-11","IAEA pre-INIR mission in Kigali","RAEB news, 29 Nov 2025","done"],
+ ["2025-12","University of Rwanda and RAEB launch a BSc in Nuclear Science and Technology","RAEB news, 8 Dec 2025","done"],
+ ["2025-12","Five-day national training and field exercise for nuclear and radiological emergency first responders (15–19 Dec)","RAEB news, 24 Dec 2025","done"],
+ ["2026-03-09","IAEA INIR Phase 1 mission for the nuclear power programme completed (2–9 March)","IAEA press release; RAEB news","done"],
  ["2026-05-19","Agreements signed with the IAEA, the United States and Holtec at NEISA 2026, Kigali","World Nuclear News; New Times","done"],
  ["2026-06","Rwanda Energy Compact launched under Mission 300","Draft Energy JSR FY2026/27","done"],
+ ["2026-06","First Rwanda–Rosatom Joint Coordinating Committee meeting, Moscow; SMR roadmap signed","RAEB news, 30 Jun 2026","done"],
+ ["2026-07","IAEA INIR mission for the research reactor project (13–21 July)","RAEB news, 24 Jul 2026","done"],
  ["2029/30","Feasibility study for a nuclear power plant","Energy Policy implementation matrix","plan"],
  ["2030","Earliest date for the first SMR unit under the fast-track option","LCPDP 2024 Review §8.4","plan"],
  ["2033","First SMR unit, 55 MW (strategic case)","LCPDP 2024 Review, Table 12","plan"],
@@ -390,14 +441,29 @@ $("#timeline").innerHTML = MILESTONES.map(([d,t,s,k])=>{
   return pre+`<div class="tl-row"><div class="tl-date">${/^\d{4}-\d{2}/.test(d)?fmtDate(d):d}</div><div class="tl-rail"><span class="tl-dot ${k==='done'?'now':''}"></span></div>
   <div class="tl-body"><span class="x">${t}</span><span class="src">${s}</span></div></div>`;}).join("");
 
+
+const NEWS=[
+ ["2026-07-24","IAEA experts conclude INIR mission for research reactor project in Rwanda","iaea-experts-conclude-inir-mission-for-research-reactor-project-in-rwanda"],
+ ["2026-07-10","University of Rwanda students win international Atoms Empowering Africa video contest 2026","university-of-rwanda-students-win-international-atoms-empowering-africa-video-contest-2026"],
+ ["2026-06-30","Rwanda and Rosatom hold the first meeting of the Joint Coordinating Committee on cooperation in the nuclear sphere","rwanda-and-rosatom-hold-the-first-meeting-of-the-joint-coordinating-committee-on-cooperation-in-the-nuclear-sphere"],
+ ["2026-03-11","Nuclear energy is central to Rwanda's development strategy – President Paul Kagame","nuclear-energy-is-central-to-rwandas-development-strategy-president-paul-kagame"],
+ ["2026-03-10","Unlocking Rwanda's industrial growth through nuclear energy","unlocking-rwandas-industrial-growth-through-nuclear-energy"],
+ ["2026-03-03","Rwanda advances nuclear power readiness with IAEA INIR Mission Phase 1","rwanda-advances-nuclear-power-readiness-with-iaea-inir-mission-phase-1"],
+ ["2026-01-16","RAEB, UNIDO discuss partnership in advancing nuclear industrial localisation","raeb-unido-discuss-partnership-in-advancing-nuclear-industrial-localisation"],
+ ["2025-12-24","Rwanda trains first responders to nuclear and radiological emergencies","rwanda-trains-first-responders-to-nuclear-and-radiological-emergencies"],
+];
+$("#news").innerHTML=NEWS.map(([d,t,u])=>`<li><span class="nd">${fmtDate(d)}</span><a href="https://www.raeb.gov.rw/updates/news-detail/${u}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("");
+
 /* partners */
 const PARTNERS = [
  ["IAEA","multi","Cooperation agreement with the Ministry of Infrastructure","2026-05-19","Integrating nuclear power into the national energy mix: energy planning, infrastructure development, training, stakeholder engagement, financing","New Times, 19 May 2026","https://www.newtimes.co.rw/article/35865/news/energy/rwanda-iaea-sign-agreement-to-advance-nuclear-energy-plans"],
  ["United States","gov","Civil nuclear cooperation memorandum of understanding","2026-05","Cooperation on civil nuclear energy","World Nuclear News, May 2026","https://wnn.world-nuclear.org/articles/rwanda-and-us-sign-civil-nuclear-cooperation-mou"],
  ["Holtec International","ind","Development agreement with RAEB","2026-05","Evaluate deployment of SMR-300 units (about 300 MWe each), potential total of up to about 5 GW","World Nuclear News, May 2026","https://wnn.world-nuclear.org/articles/rwanda-and-us-sign-civil-nuclear-cooperation-mou"],
+ ["Rosatom (Russian Federation)","gov","Roadmap on small modular reactors, signed at the first Joint Coordinating Committee meeting, Moscow","2026-06","Priorities for joint work on SMRs; committee also covers non-power applications, training and infrastructure","RAEB news, 30 June 2026","https://www.raeb.gov.rw/updates/news-detail/rwanda-and-rosatom-hold-the-first-meeting-of-the-joint-coordinating-committee-on-cooperation-in-the-nuclear-sphere"],
  ["Rosatom (Russian Federation)","gov","Roadmap signed at NEISA 2026","2026-05-19","Centre for Nuclear Science and Technology with a research reactor; training of Rwandan staff","Press report, 19 May 2026","https://gazettengr.com/rwanda-russia-sign-nuclear-energy-deal/"],
+ ["Russian Federation","gov","Intergovernmental agreement on the Centre for Nuclear Science and Technology","2019-10","Research reactor and laboratories for research, training and isotope production","RAEB, Projects","https://www.raeb.gov.rw/projects"],
  ["NANO Nuclear Energy","ind","Memorandum of understanding with RAEB","2024-08","Microreactor and SMR ecosystem; technical assistance and training","World Nuclear News, Aug 2024","https://world-nuclear-news.org/articles/rwanda-signs-agreement-with-nano-nuclear"],
- ["Dual Fluid Energy","ind","Cooperation agreement with RAEB","2023-09","Demonstration Dual Fluid reactor","KT Press, Sept 2023","https://www.ktpress.rw/2023/09/rwanda-signs-deal-to-build-first-dual-fluid-demo-nuclear-reactor-in-the-world/"],
+ ["Dual Fluid Energy","ind","Cooperation agreement with RAEB","2023-09","Critical demonstration experiment for the Dual Fluid reactor technology","RAEB, Projects","https://www.raeb.gov.rw/projects"],
 ];
 const PTYPES={all:"All",multi:"International organisations",gov:"Governments",ind:"Industry"};
 let pf="all";
@@ -517,6 +583,7 @@ const SOURCES=[
  ["National Strategy for Transformation (NST2) 2024–2029","Government of Rwanda","2024","Renewables target, nuclear technology"],
  ["Energy Policy","MININFRA","Feb 2025","Nuclear targets, capacity and access baseline"],
  ["Energy Joint Sector Review FY2026/27 (draft)","MININFRA","Sept 2026","Installed capacity, generation, access, Energy Compact target"],
+ ["Rwanda Atomic Energy Board website: projects and news","RAEB","2025–2026","Projects, milestones, Rosatom and research reactor updates"],
  ["IAEA press release on the INIR mission, as reported by Capital FM and NucNet","IAEA","Mar 2026","INIR findings and quotes"],
  ["World Nuclear News, New Times, KT Press, gazettengr.com","Media","2023–2026","Agreements"],
 ];
