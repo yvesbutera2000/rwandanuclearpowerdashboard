@@ -200,6 +200,9 @@ ul.news .nd{font-family:var(--f-mono);font-size:.78rem;color:var(--ink-3);paddin
 ul.news a{color:var(--ink);text-decoration:none}
 ul.news a:hover{color:var(--accent);text-decoration:underline}
 @media (max-width:560px){ul.news li{grid-template-columns:1fr;gap:2px}}
+.kids-link{flex:none;font:600 .85rem "Poppins",var(--f-display);color:#05284a;background:#ffb81c;text-decoration:none;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.kids-link:hover{background:#ffc94d}
+.tabbar-inner nav.tabs{min-width:0}
 </style>
 </head>
 <body>
@@ -214,12 +217,12 @@ ul.news a:hover{color:var(--accent);text-decoration:underline}
   </div>
   <span class="credit">Illustration: artist's impression, not an existing facility</span>
 </header>
-<div class="tabbar"><div class="tabbar-inner"><nav class="tabs" role="tablist" aria-label="Dashboard sections">
+<div class="tabbar"><div class="tabbar-inner" style="display:flex;align-items:center;justify-content:space-between;gap:12px"><nav class="tabs" role="tablist" aria-label="Dashboard sections">
       <button role="tab" id="t-status" aria-controls="s-status" aria-selected="true">Programme</button>
       <button role="tab" id="t-partners" aria-controls="s-partners" aria-selected="false">Partnerships</button>
       <button role="tab" id="t-energy" aria-controls="s-energy" aria-selected="false">Energy &amp; demand</button>
       <button role="tab" id="t-notes" aria-controls="s-notes" aria-selected="false">Sources</button>
-    </nav></div></div>
+    </nav><a class="kids-link" href="kids.html">For kids</a></div></div>
 
 <main class="wrap">
 

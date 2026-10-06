@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Nuclear energy explained for young people, and how Rwanda is planning its first nuclear power plant.">
+<title>Nuclear Energy for Kids · Rwanda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one long friendly story, chapter by chapter, each with a picture; bright brand blue with sunny accents */
+:root{
+  --blue:#1c75bc; --blue-d:#0e4f86; --blue-l:#e6f1fb; --sky:#f4f9ff;
+  --sun:#ffb81c; --leaf:#2fb36b; --coral:#ff6b5a; --violet:#7b61ff;
+  --ink:#10273d; --ink-2:#3e5568; --line:#d6e5f3; --card:#ffffff;
+  --f-head:"Poppins","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--f-body);font-size:17.5px;line-height:1.6}
+img,svg{max-width:100%}
+a{color:var(--blue)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+/* header */
+.top{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.top::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgb(255 255 255 / .07)}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;position:relative;z-index:1}
+.topbar a{color:#fff;font-weight:700;text-decoration:none;font-size:.95rem;background:rgb(255 255 255 / .14);padding:7px 14px;border-radius:999px}
+.topbar a:hover{background:rgb(255 255 255 / .24)}
+.topbar .brand{font-family:var(--f-head);font-weight:700;letter-spacing:.02em;font-size:.95rem;opacity:.9}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding-block:26px 44px;position:relative;z-index:1}
+.hero h1{font-family:var(--f-head);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0 0 14px;text-wrap:balance}
+.hero h1 span{color:var(--sun)}
+.hero p{font-size:1.15rem;margin:0 0 18px;max-width:34ch;color:rgb(255 255 255 / .92)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{background:#fff;color:var(--blue-d);font-weight:800;text-decoration:none;padding:7px 13px;border-radius:999px;font-size:.9rem}
+.chips a:hover{background:var(--sun)}
+.hero-art{display:flex;justify-content:center}
+/* chapters */
+main{padding-block:10px 40px}
+section.ch{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding-block:46px;border-bottom:2px dashed var(--line)}
+section.ch:nth-of-type(even) .art{order:-1}
+section.ch.full{grid-template-columns:1fr}
+.num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--sun);color:var(--ink);font-family:var(--f-head);font-weight:800;margin-bottom:8px}
+h2{font-family:var(--f-head);font-weight:800;font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.2;margin:0 0 12px;color:var(--blue-d);text-wrap:balance}
+h3{font-family:var(--f-head);font-weight:700;font-size:1.1rem;margin:0 0 6px;color:var(--ink)}
+.txt p{margin:0 0 12px}
+.txt p:last-child{margin-bottom:0}
+.art{background:var(--card);border-radius:22px;padding:18px;box-shadow:0 6px 0 var(--line);border:2px solid var(--line);min-width:0}
+.art svg{display:block;width:100%;height:auto}
+.art figcaption{font-size:.88rem;color:var(--ink-2);text-align:center;margin-top:8px}
+figure{margin:0}
+.fact{display:flex;gap:12px;align-items:flex-start;background:#fff8e6;border:2px solid #ffe2a3;border-radius:16px;padding:12px 14px;margin-top:14px}
+.fact b{font-family:var(--f-head);color:#9a6400;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:6px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.card svg{width:54px;height:54px}
+.card p{margin:0;color:var(--ink-2);font-size:.98rem}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:6px;counter-reset:s}
+.step{background:#fff;border:2px solid var(--line);border-radius:16px;padding:12px;text-align:center;font-size:.92rem;position:relative}
+.step b{display:block;font-family:var(--f-head);color:var(--blue-d)}
+/* timeline */
+.tl{display:flex;flex-direction:column;gap:0;margin-top:8px}
+.tl-item{display:grid;grid-template-columns:110px 26px 1fr;gap:12px;align-items:start}
+.tl-y{font-family:var(--f-head);font-weight:800;color:var(--blue);text-align:right;padding-top:2px}
+.tl-rail{position:relative;align-self:stretch;display:flex;justify-content:center}
+.tl-rail::before{content:"";position:absolute;top:0;bottom:0;width:4px;border-radius:2px;background:var(--line)}
+.tl-dot{position:relative;width:20px;height:20px;border-radius:50%;background:var(--leaf);border:4px solid #fff;box-shadow:0 0 0 2px var(--leaf);margin-top:4px}
+.tl-dot.next{background:#fff;box-shadow:0 0 0 2px var(--sun)}
+.tl-b{padding-bottom:18px}
+.tl-b p{margin:2px 0 0;color:var(--ink-2)}
+/* mix bars */
+.mix{display:flex;flex-direction:column;gap:9px}
+.mix-row{display:grid;grid-template-columns:130px 1fr 52px;gap:10px;align-items:center;font-weight:700;font-size:.95rem}
+.mix-track{height:20px;background:var(--blue-l);border-radius:0 10px 10px 0;position:relative;overflow:hidden}
+.mix-fill{position:absolute;inset:0 auto 0 0;border-radius:0 10px 10px 0}
+.mix-row span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+/* quiz */
+.quiz{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.q{font-family:var(--f-head);font-weight:700;font-size:1.15rem}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.opts button{font:700 1rem var(--f-body);text-align:left;background:var(--sky);border:2px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;color:var(--ink)}
+.opts button:hover{border-color:var(--blue)}
+.opts button.right{background:#e3f7ec;border-color:var(--leaf)}
+.opts button.wrong{background:#ffe9e6;border-color:var(--coral)}
+.opts button:disabled{cursor:default}
+.feedback{min-height:1.6em;font-weight:700}
+.qnav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.btn{font:800 1rem var(--f-body);background:var(--blue);color:#fff;border:0;border-radius:999px;padding:10px 20px;cursor:pointer}
+.btn:disabled{opacity:.4;cursor:default}
+.score{font-weight:800;color:var(--blue-d)}
+/* glossary */
+dl.gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:0}
+dl.gl div{background:#fff;border:2px solid var(--line);border-radius:16px;padding:12px 14px}
+dl.gl dt{font-family:var(--f-head);font-weight:700;color:var(--blue-d)}
+dl.gl dd{margin:2px 0 0;color:var(--ink-2);font-size:.96rem}
+footer{background:var(--blue-d);color:rgb(255 255 255 / .85);font-size:.88rem;padding-block:22px}
+footer a{color:#fff}
+button:focus-visible,a:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+/* animation */
+@media (prefers-reduced-motion:no-preference){
+  .spin{transform-origin:center;animation:spin 6s linear infinite}
+  .spin.r{animation-direction:reverse;animation-duration:9s}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .neutron-in{animation:nin 4s ease-in infinite}
+  @keyframes nin{0%{transform:translateX(0);opacity:1}35%{transform:translateX(118px);opacity:1}40%,100%{opacity:0;transform:translateX(118px)}}
+  .split-a{animation:sa 4s ease-out infinite} .split-b{animation:sb 4s ease-out infinite}
+  @keyframes sa{0%,38%{transform:translate(0,0);opacity:0}42%{opacity:1}100%{transform:translate(70px,-46px);opacity:1}}
+  @keyframes sb{0%,38%{transform:translate(0,0);opacity:0}42%{opacity:1}100%{transform:translate(70px,46px);opacity:1}}
+  .whole{animation:wh 4s infinite} @keyframes wh{0%,38%{opacity:1}42%,100%{opacity:0}}
+  .n-out{animation:no 4s ease-out infinite} @keyframes no{0%,40%{opacity:0;transform:translate(0,0)}45%{opacity:1}100%{opacity:1;transform:translate(var(--dx),var(--dy))}}
+  .flash{animation:fl 4s infinite} @keyframes fl{0%,38%{opacity:0}42%{opacity:1}70%,100%{opacity:0}}
+  .blade{transform-origin:330px 120px;animation:spin 2.5s linear infinite}
+  .steam{animation:st 2s ease-in-out infinite} @keyframes st{0%{opacity:.2;transform:translateY(6px)}50%{opacity:.9}100%{opacity:.2;transform:translateY(-6px)}}
+}
+@media (prefers-reduced-motion:reduce){ .whole{opacity:0} .split-a{transform:translate(70px,-46px)} .split-b{transform:translate(70px,46px)} .n-out{transform:translate(var(--dx),var(--dy))} .flash{opacity:.35} .neutron-in{transform:translateX(70px)} }
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-block:10px 32px}
+  .hero-art{order:-1}
+  .hero-art svg{width:200px}
+  section.ch{grid-template-columns:1fr;padding-block:34px}
+  section.ch:nth-of-type(even) .art{order:0}
+  .steps{grid-template-columns:1fr 1fr}
+  .tl-item{grid-template-columns:78px 22px 1fr}
+  .mix-row{grid-template-columns:100px 1fr 46px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="topbar">
+      <span class="brand">Rwanda Nuclear Power Programme</span>
+      <a href="index.html">← Dashboard</a>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>The tiny atom with <span>big power</span></h1>
+        <p>What is nuclear energy, how does it make electricity, and why is Rwanda planning its own nuclear power plant? Let's find out together.</p>
+        <nav class="chips" aria-label="Chapters">
+          <a href="#atoms">Atoms</a><a href="#split">Splitting</a><a href="#plant">Power plant</a><a href="#safe">Safety</a><a href="#rwanda">Rwanda's plan</a><a href="#quiz">Quiz</a>
+        </nav>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 260 260" width="260" height="260">
+          <circle cx="130" cy="130" r="118" fill="rgb(255 255 255 / .08)"/>
+          <g class="spin"><ellipse cx="130" cy="130" rx="108" ry="38" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/><circle cx="238" cy="130" r="10" fill="#ffb81c"/></g>
+          <g class="spin r" style="transform-box:fill-box"><g transform="rotate(60 130 130)"><ellipse cx="130" cy="130" rx="108" ry="38" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/><circle cx="22" cy="130" r="10" fill="#ffb81c"/></g></g>
+          <g transform="rotate(-60 130 130)"><ellipse cx="130" cy="130" rx="108" ry="38" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/><circle cx="130" cy="92" r="10" fill="#ffb81c"/></g>
+          <circle cx="120" cy="122" r="14" fill="#ff6b5a"/><circle cx="141" cy="122" r="14" fill="#7cc4ff"/><circle cx="130" cy="140" r="14" fill="#ff6b5a"/><circle cx="112" cy="140" r="12" fill="#7cc4ff"/><circle cx="148" cy="140" r="12" fill="#ff6b5a"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- 1 ATOMS -->
+<section class="ch" id="atoms">
+  <div class="txt">
+    <span class="num">1</span>
+    <h2>Everything is made of atoms</h2>
+    <p>Your pencil, the water you drink, the air and even you are made of tiny pieces called <b>atoms</b>. They are so small that a single grain of sand has more atoms than there are grains of sand on all the beaches in the world.</p>
+    <p>In the middle of every atom is a <b>nucleus</b>. It is made of <b>protons</b> and <b>neutrons</b> squeezed tightly together. Even tinier <b>electrons</b> zoom around the outside.</p>
+    <p>The word <b>nuclear</b> simply means "about the nucleus".</p>
+  </div>
+  <figure class="art">
+    <svg viewBox="0 0 400 280" role="img" aria-label="Drawing of an atom: protons and neutrons in the nucleus in the middle, electrons circling around it">
+      <g fill="none" stroke="#9cc6ec" stroke-width="3">
+        <ellipse cx="200" cy="140" rx="160" ry="56"/>
+        <ellipse cx="200" cy="140" rx="160" ry="56" transform="rotate(60 200 140)"/>
+        <ellipse cx="200" cy="140" rx="160" ry="56" transform="rotate(-60 200 140)"/>
+      </g>
+      <circle cx="360" cy="140" r="11" fill="#ffb81c"/><circle cx="120" cy="71" r="11" fill="#ffb81c"/><circle cx="120" cy="209" r="11" fill="#ffb81c"/>
+      <g><circle cx="188" cy="130" r="17" fill="#ff6b5a"/><circle cx="213" cy="130" r="17" fill="#1c75bc"/><circle cx="200" cy="152" r="17" fill="#ff6b5a"/><circle cx="178" cy="152" r="14" fill="#1c75bc"/><circle cx="222" cy="152" r="14" fill="#ff6b5a"/></g>
+      <g font-family="Nunito,sans-serif" font-weight="800" font-size="14" fill="#10273d">
+        <line x1="190" y1="112" x2="150" y2="34" stroke="#10273d" stroke-width="1.5"/><text x="96" y="28">Proton (+)</text>
+        <line x1="222" y1="118" x2="268" y2="34" stroke="#10273d" stroke-width="1.5"/><text x="246" y="28">Neutron</text>
+        <line x1="360" y1="152" x2="352" y2="238" stroke="#10273d" stroke-width="1.5"/><text x="318" y="258">Electron (−)</text>
+        <text x="148" y="272" fill="#3e5568" font-weight="700">The nucleus is in the middle</text>
+      </g>
+    </svg>
+  </figure>
+</section>
+
+<!-- 2 SPLITTING -->
+<section class="ch" id="split">
+  <div class="txt">
+    <span class="num">2</span>
+    <h2>Splitting an atom makes heat</h2>
+    <p>Some atoms are very big and a little wobbly. One of them is called <b>uranium</b>. When a tiny <b>neutron</b> hits a uranium nucleus, the nucleus splits into two smaller pieces.</p>
+    <p>This splitting is called <b>fission</b>. It gives off lots of <b>heat</b> and also shoots out two or three new neutrons. Those neutrons can hit more uranium atoms, which split too. This is a <b>chain reaction</b>.</p>
+    <p>In a power plant, special <b>control rods</b> soak up extra neutrons, like a brake, so the chain reaction stays steady and calm.</p>
+    <div class="fact"><b>Wow!</b><span>One small uranium fuel pellet, about the size of the tip of your finger, gives about as much energy as a tonne of coal.</span></div>
+  </div>
+  <figure class="art">
+    <svg viewBox="0 0 400 260" role="img" aria-label="Animation: a neutron hits a uranium nucleus, which splits into two smaller atoms, releasing heat and new neutrons">
+      <circle class="neutron-in" cx="40" cy="130" r="10" fill="#1c75bc"/>
+      <text x="16" y="160" font-family="Nunito,sans-serif" font-weight="800" font-size="13" fill="#3e5568">neutron</text>
+      <g class="whole"><circle cx="170" cy="130" r="40" fill="#2fb36b"/><text x="170" y="135" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="15" fill="#fff">Uranium</text></g>
+      <circle class="flash" cx="170" cy="130" r="58" fill="#ffb81c" opacity=".55"/>
+      <g class="split-a" style="transform-box:fill-box"><circle cx="190" cy="130" r="26" fill="#2fb36b"/></g>
+      <g class="split-b" style="transform-box:fill-box"><circle cx="190" cy="130" r="24" fill="#2fb36b"/></g>
+      <circle class="n-out" style="--dx:170px;--dy:-30px" cx="190" cy="130" r="8" fill="#1c75bc"/>
+      <circle class="n-out" style="--dx:180px;--dy:10px" cx="190" cy="130" r="8" fill="#1c75bc"/>
+      <circle class="n-out" style="--dx:160px;--dy:50px" cx="190" cy="130" r="8" fill="#1c75bc"/>
+      <g font-family="Nunito,sans-serif" font-weight="800" font-size="13" fill="#9a6400"><text x="150" y="232">HEAT!</text></g>
+      <path d="M150 214 q8 -14 0 -26 q-8 -12 0 -24" stroke="#ff6b5a" stroke-width="4" fill="none" stroke-linecap="round" class="steam"/>
+      <path d="M176 214 q8 -14 0 -26 q-8 -12 0 -24" stroke="#ff6b5a" stroke-width="4" fill="none" stroke-linecap="round" class="steam"/>
+      <text x="300" y="250" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="13" fill="#3e5568">new neutrons fly off</text>
+    </svg>
+  </figure>
+</section>
+
+<!-- 3 POWER PLANT -->
+<section class="ch full" id="plant">
+  <div class="txt">
+    <span class="num">3</span>
+    <h2>From heat to the light in your room</h2>
+    <p>A nuclear power plant works a lot like a giant kettle. The heat from splitting atoms boils water. The steam pushes a big wheel with blades, called a <b>turbine</b>, and makes it spin. The spinning turbine turns a <b>generator</b>, which makes electricity. Wires carry the electricity to homes, schools, hospitals and factories.</p>
+  </div>
+  <figure class="art">
+    <svg viewBox="0 0 900 250" role="img" aria-label="Diagram: the reactor heats water into steam, the steam spins a turbine, the turbine turns a generator, and power lines carry electricity to a house">
+      <g font-family="Poppins,sans-serif" font-weight="700" font-size="15" fill="#10273d" text-anchor="middle">
+        <!-- reactor -->
+        <rect x="30" y="70" width="140" height="130" rx="20" fill="#e6f1fb" stroke="#1c75bc" stroke-width="3"/>
+        <rect x="70" y="105" width="14" height="70" rx="4" fill="#2fb36b"/><rect x="93" y="105" width="14" height="70" rx="4" fill="#2fb36b"/><rect x="116" y="105" width="14" height="70" rx="4" fill="#2fb36b"/>
+        <rect x="80" y="82" width="6" height="40" fill="#5b6b78"/><rect x="104" y="82" width="6" height="40" fill="#5b6b78"/>
+        <text x="100" y="228">1 · Reactor</text>
+        <!-- arrow -->
+        <path d="M178 135 h44" stroke="#ff6b5a" stroke-width="5" marker-end="url(#ar)"/>
+        <!-- boiler -->
+        <rect x="236" y="90" width="110" height="110" rx="18" fill="#fff" stroke="#1c75bc" stroke-width="3"/>
+        <path d="M250 170 q14 -10 28 0 t28 0 t28 0 v22 h-84 z" fill="#7cc4ff"/>
+        <path class="steam" d="M268 150 q8 -14 0 -26 q-8 -12 0 -24" stroke="#9cc6ec" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path class="steam" d="M298 150 q8 -14 0 -26 q-8 -12 0 -24" stroke="#9cc6ec" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path class="steam" d="M326 150 q8 -14 0 -26 q-8 -12 0 -24" stroke="#9cc6ec" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <text x="291" y="228">2 · Steam</text>
+        <path d="M352 135 h40" stroke="#9cc6ec" stroke-width="5" marker-end="url(#ar2)"/>
+        <!-- turbine -->
+        <circle cx="440" cy="135" r="48" fill="#fff" stroke="#1c75bc" stroke-width="3"/>
+        <g style="transform-origin:440px 135px" class="spin"><path d="M440 135 l0 -40 a14 14 0 0 1 14 14 z M440 135 l40 0 a14 14 0 0 1 -14 14 z M440 135 l0 40 a14 14 0 0 1 -14 -14 z M440 135 l-40 0 a14 14 0 0 1 14 -14 z" fill="#1c75bc"/></g>
+        <circle cx="440" cy="135" r="7" fill="#ffb81c"/>
+        <text x="440" y="228">3 · Turbine</text>
+        <path d="M490 135 h40" stroke="#5b6b78" stroke-width="8"/>
+        <!-- generator -->
+        <rect x="532" y="95" width="110" height="80" rx="14" fill="#ffb81c"/>
+        <path d="M586 110 l-14 26 h14 l-8 26 l26 -34 h-15 l10 -18 z" fill="#fff"/>
+        <text x="587" y="228">4 · Generator</text>
+        <!-- lines -->
+        <path d="M642 120 h40" stroke="#5b6b78" stroke-width="3"/>
+        <path d="M690 190 l18 -110 l18 110 M694 165 h28 M699 135 h18 M702 108 h12" stroke="#5b6b78" stroke-width="4" fill="none"/>
+        <path d="M708 82 q60 30 112 40" stroke="#5b6b78" stroke-width="3" fill="none"/>
+        <!-- house -->
+        <path d="M790 140 l40 -34 l40 34 v56 h-80 z" fill="#ff6b5a"/>
+        <rect x="815" y="160" width="22" height="22" fill="#ffe28a"/>
+        <text x="830" y="228">5 · Your home</text>
+      </g>
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ff6b5a"/></marker>
+        <marker id="ar2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9cc6ec"/></marker>
+      </defs>
+    </svg>
+  </figure>
+  <div class="cards">
+    <div class="card">
+      <svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#e3f7ec"/><path d="M16 34 q4 -16 22 -18 q-2 18 -18 22 z" fill="#2fb36b"/><path d="M18 36 l14 -14" stroke="#fff" stroke-width="2"/></svg>
+      <h3>No smoke</h3>
+      <p>Nothing burns inside a nuclear power plant, so it does not puff out smoke or the gases that make the planet warmer. The white clouds you sometimes see are only water vapour.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#fff4d6"/><circle cx="27" cy="27" r="9" fill="#ffb81c"/><g stroke="#ffb81c" stroke-width="3" stroke-linecap="round"><path d="M27 8v6M27 40v6M8 27h6M40 27h6M14 14l4 4M36 36l4 4M40 14l-4 4M14 40l4-4"/></g></svg>
+      <h3>Day and night</h3>
+      <p>The sun sets and rain stops, but a nuclear plant can keep making electricity all day and all night, in every season.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#e6f1fb"/><rect x="17" y="18" width="20" height="22" rx="4" fill="#1c75bc"/><rect x="22" y="13" width="10" height="7" rx="2" fill="#1c75bc"/></svg>
+      <h3>Tiny fuel</h3>
+      <p>Because a little uranium gives so much energy, a nuclear plant needs only a small amount of fuel. New fuel is added only every year or two.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 SAFETY -->
+<section class="ch" id="safe">
+  <div class="txt">
+    <span class="num">4</span>
+    <h2>How do we keep it safe?</h2>
+    <p>Nuclear fuel gives off something invisible called <b>radiation</b>. A little radiation is all around us every day, from rocks, the ground and even the sky. Too much can be harmful, so nuclear plants keep it locked inside.</p>
+    <p>The fuel sits inside <b>layer after layer of protection</b>: strong metal tubes, a thick steel container and a very thick concrete building. Plants also have many ways to shut down safely and keep cool.</p>
+    <p>Highly trained people run the plant, and in Rwanda a <b>regulator</b> called <b>RURA</b> acts like a referee: it checks that all the safety rules are followed. The <b>IAEA</b>, a world organisation, helps countries learn from each other.</p>
+    <p>Used fuel is a small amount of solid material. It is stored carefully in strong containers, away from people.</p>
+  </div>
+  <figure class="art">
+    <svg viewBox="0 0 400 300" role="img" aria-label="Layers of protection around nuclear fuel: fuel pellet, metal tube, steel container, concrete building">
+      <rect x="20" y="20" width="360" height="250" rx="28" fill="#cfd8e0"/>
+      <rect x="62" y="56" width="276" height="178" rx="22" fill="#9aa9b6"/>
+      <rect x="104" y="92" width="192" height="106" rx="16" fill="#e6f1fb" stroke="#1c75bc" stroke-width="3"/>
+      <rect x="150" y="120" width="100" height="50" rx="25" fill="#fff" stroke="#5b6b78" stroke-width="3"/>
+      <circle cx="200" cy="145" r="16" fill="#2fb36b"/>
+      <g font-family="Poppins,sans-serif" font-weight="700" font-size="13" fill="#10273d">
+        <text x="34" y="44">4 · Thick concrete building</text>
+        <text x="76" y="80" fill="#fff">3 · Steel container</text>
+        <text x="116" y="114">2 · Metal tube</text>
+        <text x="178" y="190">1 · Fuel</text>
+      </g>
+      <text x="200" y="292" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="13" fill="#3e5568">Each layer helps keep radiation inside</text>
+    </svg>
+  </figure>
+</section>
+
+<!-- 5 HELPERS -->
+<section class="ch full" id="helpers">
+  <div class="txt">
+    <span class="num">5</span>
+    <h2>Nuclear science helps in other ways too</h2>
+    <p>Nuclear science is not only for electricity. Rwanda wants to use it in many parts of life.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#ffe9e6"/><path d="M23 14h8v9h9v8h-9v9h-8v-9h-9v-8h9z" fill="#ff6b5a"/></svg>
+      <h3>Hospitals</h3><p>Doctors use nuclear medicine to take pictures inside the body and to treat illnesses like cancer.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#e3f7ec"/><path d="M27 42V22" stroke="#2fb36b" stroke-width="3"/><path d="M27 26 q-12 -2 -12 -12 q12 0 12 12 M27 30 q12 -2 12 -12 q-12 0 -12 12" fill="#2fb36b"/></svg>
+      <h3>Farms</h3><p>Scientists use it to grow stronger crops, keep food fresh for longer and stop harmful insects.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#efeaff"/><path d="M21 12h12M23 12v12l-9 16h26l-9-16V12" fill="none" stroke="#7b61ff" stroke-width="3" stroke-linejoin="round"/><path d="M18 34h18l3 6H15z" fill="#7b61ff"/></svg>
+      <h3>Science and training</h3><p>Rwanda's planned Centre for Nuclear Science and Technology will have a small research reactor for science, training and making medicines.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#e6f1fb"/><path d="M16 38h22M18 38V24l9-8 9 8v14" fill="none" stroke="#1c75bc" stroke-width="3"/><rect x="24" y="28" width="6" height="10" fill="#1c75bc"/></svg>
+      <h3>Industry</h3><p>Factories use it to check that pipes and machines are strong and safe without breaking them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 RWANDA -->
+<section class="ch" id="rwanda">
+  <div class="txt">
+    <span class="num">6</span>
+    <h2>Why does Rwanda want nuclear power?</h2>
+    <p>Rwanda is growing fast. More homes, schools, hospitals and factories all need electricity. In 2024 the country needed up to <b>242 megawatts</b> at its busiest moment. If that keeps growing by about 10% every year, Rwanda could need around <b>12 times as much by 2050</b>.</p>
+    <p>Today Rwanda's electricity comes mostly from <b>methane gas</b> taken from Lake Kivu, from <b>water</b> flowing through rivers (hydropower), from neighbouring countries, from <b>peat</b> and from the <b>sun</b>.</p>
+    <p>Nuclear power would add a strong, clean source that works day and night, rain or shine.</p>
+    <p class="src" style="font-size:.85rem;color:var(--ink-2)">Sources: Least Cost Power Development Plan 2024 Review (REG, 2025); REG, 2026</p>
+  </div>
+  <figure class="art">
+    <h3 style="margin-bottom:12px">Where Rwanda's electricity came from (2025/26)</h3>
+    <div class="mix" role="img" aria-label="Share of electricity by source in 2025/26: methane gas 35%, water 25%, from other countries 17%, shared plants with neighbours 15%, peat 7%, sun 1%">
+      <div class="mix-row"><span>Methane gas</span><span class="mix-track"><span class="mix-fill" style="width:100%;background:#ffb81c"></span></span><span>35%</span></div>
+      <div class="mix-row"><span>Water</span><span class="mix-track"><span class="mix-fill" style="width:72%;background:#1c75bc"></span></span><span>25%</span></div>
+      <div class="mix-row"><span>Other countries</span><span class="mix-track"><span class="mix-fill" style="width:49%;background:#7b61ff"></span></span><span>17%</span></div>
+      <div class="mix-row"><span>Shared plants</span><span class="mix-track"><span class="mix-fill" style="width:42%;background:#9b8cff"></span></span><span>15%</span></div>
+      <div class="mix-row"><span>Peat</span><span class="mix-track"><span class="mix-fill" style="width:21%;background:#a0703a"></span></span><span>7%</span></div>
+      <div class="mix-row"><span>Sun</span><span class="mix-track"><span class="mix-fill" style="width:3%;background:#ff6b5a"></span></span><span>1%</span></div>
+    </div>
+    <figcaption>Shared plants are power stations Rwanda shares with its neighbours.</figcaption>
+  </figure>
+</section>
+
+<!-- 7 SMR -->
+<section class="ch" id="smr">
+  <div class="txt">
+    <span class="num">7</span>
+    <h2>A small reactor for a small country</h2>
+    <p>Some nuclear power plants in the world are enormous. Rwanda plans to use a <b>Small Modular Reactor</b>, or <b>SMR</b>.</p>
+    <p><b>Small</b> because it makes less power than a giant plant, which suits Rwanda's electricity network. <b>Modular</b> because its parts can be built in a factory, like big building blocks, and then put together on site. More blocks can be added later as Rwanda needs more electricity.</p>
+    <p>Rwanda's plan suggests a first unit of about <b>55 megawatts</b>, which could start in the early 2030s.</p>
+  </div>
+  <figure class="art">
+    <svg viewBox="0 0 400 260" role="img" aria-label="Comparison: a large traditional nuclear plant next to a much smaller modular reactor made of blocks">
+      <rect x="0" y="210" width="400" height="50" fill="#e3f7ec"/>
+      <!-- big plant -->
+      <path d="M40 210 q10 -70 -6 -150 h92 q-16 80 -6 150 z" fill="#cfd8e0"/>
+      <ellipse cx="80" cy="60" rx="46" ry="8" fill="#b7c3cd"/>
+      <path class="steam" d="M66 48 q10 -14 0 -26 M92 48 q10 -14 0 -26" stroke="#cfd8e0" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <rect x="128" y="150" width="70" height="60" rx="6" fill="#b7c3cd"/>
+      <text x="110" y="244" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="700" font-size="14" fill="#10273d">Big traditional plant</text>
+      <!-- smr -->
+      <g>
+        <rect x="270" y="168" width="34" height="42" rx="6" fill="#1c75bc"/>
+        <rect x="308" y="168" width="34" height="42" rx="6" fill="#1c75bc"/>
+        <rect x="346" y="168" width="34" height="42" rx="6" fill="#fff" stroke="#1c75bc" stroke-width="2.5" stroke-dasharray="5 4"/>
+        <text x="363" y="194" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="18" fill="#1c75bc">+</text>
+        <path d="M287 168 v-12 M325 168 v-12" stroke="#ffb81c" stroke-width="4"/>
+      </g>
+      <text x="325" y="244" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="700" font-size="14" fill="#10273d">SMR: add blocks later</text>
+    </svg>
+  </figure>
+</section>
+
+<!-- 8 TIMELINE -->
+<section class="ch full" id="journey">
+  <div class="txt">
+    <span class="num">8</span>
+    <h2>Rwanda's nuclear journey</h2>
+    <p>Building a nuclear power plant takes many years of careful preparation. Here are the big steps so far, and what comes next.</p>
+  </div>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-y">2019</div><div class="tl-rail"><span class="tl-dot"></span></div><div class="tl-b"><b>Agreement for a science centre</b><p>Rwanda agreed with Russia to build a Centre for Nuclear Science and Technology with a research reactor.</p></div></div>
+    <div class="tl-item"><div class="tl-y">2020</div><div class="tl-rail"><span class="tl-dot"></span></div><div class="tl-b"><b>RAEB is created</b><p>The Rwanda Atomic Energy Board was set up to lead the peaceful use of nuclear energy in Rwanda.</p></div></div>
+    <div class="tl-item"><div class="tl-y">2025</div><div class="tl-rail"><span class="tl-dot"></span></div><div class="tl-b"><b>Students can study nuclear science</b><p>The University of Rwanda and RAEB launched a Bachelor's degree in Nuclear Science and Technology.</p></div></div>
+    <div class="tl-item"><div class="tl-y">2026</div><div class="tl-rail"><span class="tl-dot"></span></div><div class="tl-b"><b>A check-up from world experts</b><p>The IAEA visited Rwanda to review how ready the country is for nuclear power, and later for the research reactor. They found strong progress.</p></div></div>
+    <div class="tl-item"><div class="tl-y">Next</div><div class="tl-rail"><span class="tl-dot next"></span></div><div class="tl-b"><b>Studies, laws and choosing a site</b><p>Rwanda will finish its nuclear law, study the best place for the plant and choose the technology.</p></div></div>
+    <div class="tl-item"><div class="tl-y">Early 2030s</div><div class="tl-rail"><span class="tl-dot next"></span></div><div class="tl-b"><b>The first small reactor</b><p>Rwanda's goal is for its first SMR to start making electricity.</p></div></div>
+  </div>
+</section>
+
+<!-- 9 CAREERS -->
+<section class="ch full" id="you">
+  <div class="txt">
+    <span class="num">9</span>
+    <h2>You could work in nuclear one day!</h2>
+    <p>Rwanda will need many skilled people to build and run its nuclear programme. The young people in school today could become:</p>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>Engineer</h3><p>Designs, builds and runs the reactor, turbines and power lines.</p></div>
+    <div class="card"><h3>Scientist</h3><p>Studies atoms and finds new ways to use nuclear science.</p></div>
+    <div class="card"><h3>Safety inspector</h3><p>Checks that everything follows the safety rules, like a referee.</p></div>
+    <div class="card"><h3>Nuclear medicine doctor</h3><p>Uses nuclear science to find and treat illnesses.</p></div>
+  </div>
+  <div class="fact" style="background:var(--blue-l);border-color:var(--line)"><b style="color:var(--blue-d)">Tip</b><span>Mathematics, physics and chemistry are great subjects to start with. Keep asking questions!</span></div>
+</section>
+
+<!-- QUIZ -->
+<section class="ch full" id="quiz">
+  <div class="txt">
+    <span class="num">?</span>
+    <h2>Test yourself</h2>
+  </div>
+  <div class="quiz" aria-live="polite">
+    <div class="qnav"><span class="score" id="qcount"></span><span class="score" id="qscore"></span></div>
+    <div class="q" id="qtext"></div>
+    <div class="opts" id="qopts"></div>
+    <div class="feedback" id="qfb"></div>
+    <div class="qnav"><span></span><button class="btn" id="qnext" type="button" disabled>Next question</button></div>
+  </div>
+</section>
+
+<!-- GLOSSARY -->
+<section class="ch full" id="words">
+  <div class="txt"><h2>New words</h2></div>
+  <dl class="gl">
+    <div><dt>Atom</dt><dd>A tiny building block that everything is made of.</dd></div>
+    <div><dt>Nucleus</dt><dd>The centre of an atom, made of protons and neutrons.</dd></div>
+    <div><dt>Uranium</dt><dd>A heavy metal from the ground, used as nuclear fuel.</dd></div>
+    <div><dt>Fission</dt><dd>When a big nucleus splits into two, giving off heat.</dd></div>
+    <div><dt>Reactor</dt><dd>The part of a power plant where fission happens safely.</dd></div>
+    <div><dt>Megawatt (MW)</dt><dd>A unit for power. 1 MW is enough to light about 100,000 LED bulbs at the same time.</dd></div>
+    <div><dt>SMR</dt><dd>Small Modular Reactor: a smaller nuclear reactor built from factory-made parts.</dd></div>
+    <div><dt>RAEB</dt><dd>Rwanda Atomic Energy Board, which leads Rwanda's nuclear programme.</dd></div>
+    <div><dt>RURA</dt><dd>Rwanda's regulator, which checks that nuclear activities are safe.</dd></div>
+    <div><dt>IAEA</dt><dd>International Atomic Energy Agency, which helps countries use nuclear energy safely and peacefully.</dd></div>
+  </dl>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">For teachers and parents: the figures on this page come from Rwanda's Least Cost Power Development Plan (REG, 2025), REG 2026 data and the Rwanda Atomic Energy Board. See the full <a href="index.html">programme dashboard</a> for sources, or visit <a href="https://www.raeb.gov.rw" target="_blank" rel="noopener">raeb.gov.rw</a>.</div>
+</footer>
+
+<script>
+const QUIZ=[
+ {q:"What is everything around us made of?",o:["Atoms","Electricity","Steam"],a:0,e:"Yes! Everything, even you, is made of tiny atoms."},
+ {q:"What do we call it when a big atom splits in two?",o:["Fusion","Fission","Friction"],a:1,e:"Right! Fission is splitting. It gives off lots of heat."},
+ {q:"In a nuclear power plant, what spins the turbine?",o:["Wind","Steam","A big motor"],a:1,e:"Correct! Heat boils water into steam, and the steam spins the turbine."},
+ {q:"What does SMR stand for?",o:["Super Mega Rocket","Small Modular Reactor","Solar Moon Ray"],a:1,e:"Well done! A Small Modular Reactor is the kind Rwanda plans to use."},
+ {q:"Who checks that nuclear activities in Rwanda follow the safety rules?",o:["RURA","The football club","Nobody"],a:0,e:"Exactly! RURA is the regulator, like a referee for safety."},
+ {q:"When does Rwanda hope its first small reactor will start working?",o:["Next week","Early 2030s","In 100 years"],a:1,e:"That's it! The goal is the early 2030s."},
+];
+let qi=0, score=0, answered=false, done=false;
+const $=id=>document.getElementById(id);
+function show(){
+  const it=QUIZ[qi]; answered=false;
+  $("qcount").textContent=`Question ${qi+1} of ${QUIZ.length}`;
+  $("qscore").textContent=`Score: ${score}`;
+  $("qtext").textContent=it.q; $("qfb").textContent="";
+  $("qopts").innerHTML=it.o.map((t,i)=>`<button type="button" data-i="${i}">${t}</button>`).join("");
+  $("qnext").disabled=true; $("qnext").textContent= qi===QUIZ.length-1?"See my score":"Next question";
+}
+$("qopts").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b||answered) return; answered=true;
+  const it=QUIZ[qi], i=+b.dataset.i;
+  [...$("qopts").children].forEach((x,j)=>{x.disabled=true; if(j===it.a) x.classList.add("right");});
+  if(i===it.a){score++; $("qfb").textContent="🎉 "+it.e;} else {b.classList.add("wrong"); $("qfb").textContent="Not quite. "+it.e;}
+  $("qscore").textContent=`Score: ${score}`; $("qnext").disabled=false;
+});
+$("qnext").addEventListener("click",()=>{
+  if(done){ done=false; qi=0; score=0; show(); return; }
+  if(qi<QUIZ.length-1){ qi++; show(); return; }
+  done=true;
+  $("qtext").textContent=`You got ${score} out of ${QUIZ.length}! ${score===QUIZ.length?"You're a nuclear star!":score>=4?"Great job!":"Read the chapters again and try once more."}`;
+  $("qopts").innerHTML=""; $("qfb").textContent=""; $("qcount").textContent="Finished";
+  $("qnext").textContent="Play again";
+});
+show();
+</script>
+</body>
+</html>
